@@ -13,7 +13,6 @@ const symbolCollector = (connect, monitor) => {
     return {
         connectDragSource: connect.dragSource(),
         isDragging: monitor.isDragging()
-
     };
 };
 
