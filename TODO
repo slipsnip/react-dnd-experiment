@@ -1,3 +1,5 @@
 
 Todo:
-  ☐ Fix react-dnd styled-components conflict error
+  ✔ Fix react-dnd styled-components conflict error @done(18-07-14 18:43)
+  ☐ Investigate React Route
+  ☐ Investigate lowdb for loading svg's used by Symbol component
