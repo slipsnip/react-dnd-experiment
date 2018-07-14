@@ -9,12 +9,7 @@ const Title = styled.h1`
     background: #ddd;
 `;
 
-const Frame = styled.div`
-    background: #eee;
-    padding: 0px;
-    margin: 0px;
-    ${props => (props.area && `grid-area:${props.area}`)}
-`;
+
 
 const containerDrop = {
     drop(props, monitor, component) {
@@ -35,12 +30,19 @@ class Container extends Component {
     render() {
         const { connectDropTarget } = this.props;
         return connectDropTarget(
-            <Frame area={this.props.area}>
+            <div className={this.props.className} area={this.props.area}>
                 <Title>{this.props.title}</Title>
                 <p>{this.props.children}</p>
-            </Frame>
+            </div>
         );
     }
 }
 
-export default DropTarget(['symbol'], containerDrop, containerCollector)(Container);
+const StyledContainer = styled(Container)`
+    background: #eee;
+    padding: 0px;
+    margin: 0px;
+    ${props => (props.area && `grid-area:${props.area}`)}
+`;
+
+export default DropTarget(['symbol'], containerDrop, containerCollector)(StyledContainer);
