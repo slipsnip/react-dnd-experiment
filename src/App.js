@@ -5,7 +5,7 @@ import { DragDropContext } from 'react-dnd';
 import 'normalize.css'; // CSS Reset
 // Routes
 import Home from './routes/Home';
-import Library from './routes/Library';
+import LibraryManager from './routes/LibraryManager';
 
 import 'normalize.css'; // CSS Reset
 
@@ -13,7 +13,7 @@ function App() {
     return (
         <div className="app">
             <Route exact={true} path="/" component={Home} />
-            <Route exact={true} path="/library" component={Library} />
+            <Route exact={true} path="/library" component={LibraryManager} />
         </div>        
     );
 }

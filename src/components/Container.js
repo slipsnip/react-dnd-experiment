@@ -30,7 +30,7 @@ class Container extends Component {
     render() {
         const { connectDropTarget } = this.props;
         return connectDropTarget(
-            <div className={this.props.className} area={this.props.area}>
+            <div className={this.props.className}>
                 <Title>{this.props.title}</Title>
                 <p>{this.props.children}</p>
             </div>

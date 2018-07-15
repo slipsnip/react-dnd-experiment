@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../components/Container';
+import Library from '../components/Library';
 // import { Link } from 'react-router-dom';
 import LinkButton from '../components/LinkButton';
 
@@ -20,9 +21,9 @@ const Grid = styled.div`
 const Home = () => (
     <Grid>
         <Container title="whiteboard" area="area1" />
-        <Container title="library" area="area2">
+        <Library title="library" area="area2">
             <LinkButton to="/library">Manage Library</LinkButton>
-        </Container>
+        </Library>
         <Container title="properties" area="area3" />
     </Grid>
 );
